@@ -165,6 +165,18 @@
 		linux,reserve-region;
 		linux,remove-completely;
 	};
+
+	demura_region_0 {
+        status = "disabled";
+    };
+
+	demura_heap_memory: demura_heap_region {
+		compatible = "shared-dma-pool";
+		alloc-ranges = <0x0 0x80000000 0x0 0xdfffffff>;
+		size = <0x0 0x00040000>;          
+		alignment = <0x0 0x00010000>;
+		label = "demura hfc region 0";
+    };
 };
 
 &sdhc_2 {
