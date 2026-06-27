@@ -17,6 +17,28 @@
 	status = "disabled";
 };
 
+&msm_gpu {
+	qcom,gpu-pwrlevel-bins {
+		qcom,gpu-pwrlevels-1 {
+			qcom,gpu-pwrlevel@9 {
+				reg = <9>;
+				qcom,gpu-freq = <220000000>;
+				qcom,level = <56>;
+
+				qcom,bus-freq-ddr7 = <2>;
+				qcom,bus-min-ddr7 = <1>;
+				qcom,bus-max-ddr7 = <4>;
+
+				qcom,bus-freq-ddr8 = <2>;
+				qcom,bus-min-ddr8 = <1>;
+				qcom,bus-max-ddr8 = <4>;
+
+				qcom,acd-level = <0xc8295ffd>;
+			};
+		};
+	};
+};
+
 &pm7550_l22 {
 	regulator-min-microvolt = <3300000>;
 	regulator-max-microvolt = <3300000>;
